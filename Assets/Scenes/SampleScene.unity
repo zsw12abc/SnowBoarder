@@ -206,6 +206,7 @@ GameObject:
   - component: {fileID: 269031309}
   - component: {fileID: 269031313}
   - component: {fileID: 269031314}
+  - component: {fileID: 269031315}
   m_Layer: 0
   m_Name: Barry
   m_TagString: Untagged
@@ -283,6 +284,19 @@ CircleCollider2D:
   m_Offset: {x: 0.37, y: 1.03}
   serializedVersion: 2
   m_Radius: 0.37
+--- !u!114 &269031315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269031308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47bca37f933cc12469d205c1e7a1e945, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  torqueAmount: 3
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
