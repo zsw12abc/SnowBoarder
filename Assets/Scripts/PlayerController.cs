@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float torqueAmount = 1f;
-    [SerializeField] private float bootSpeed = 30f;
-    [SerializeField] private float baseSpeed = 10f;
-    
+    [SerializeField] float torqueAmount = 1f;
+    [SerializeField] float bootSpeed = 30f;
+    [SerializeField] float baseSpeed = 10f;
+    private bool canMove = true;
 
-    private Rigidbody2D rb;
-    private SurfaceEffector2D _surfaceEffector2D;
+
+    Rigidbody2D rb;
+    SurfaceEffector2D _surfaceEffector2D;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotatePlayer();
-        RespondToBoost();
+        if (canMove)
+        {
+            RotatePlayer();
+            RespondToBoost();
+        }
+    }
+
+    public void DisableControls()
+    {
+        canMove = false;
     }
 
     void RespondToBoost()
